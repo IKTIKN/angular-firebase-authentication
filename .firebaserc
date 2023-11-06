@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "angular-firebase-auth-37a40"
-  }
+  },
+  "targets": {
+    "angular-firebase-auth-37a40": {
+      "hosting": {
+        "angular-firebase-authentication": [
+          "angular-firebase-auth-37a40"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
