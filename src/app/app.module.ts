@@ -8,6 +8,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp({"projectId":"angular-firebase-auth-37a40","appId":"1:459768664863:web:df6c786db9cdc016a5962a","storageBucket":"angular-firebase-auth-37a40.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCbcE4wmzcIOKZ-ElRlr1ut6sMhJp3K134","authDomain":"angular-firebase-auth-37a40.firebaseapp.com","messagingSenderId":"459768664863","measurementId":"G-2X3ZH1HLHX"})),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     provideAnalytics(() => getAnalytics()),
     provideFirestore(() => getFirestore()),
